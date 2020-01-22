@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinPrimerClase.View.TipoDatosView" xmlns:VM="clr-namespace:XamarinPrimerClase.ViewModel">
+    <ContentPage.BindingContext>
+        <VM:TIpoDeDatosViewModel/>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry Text="{Binding MisDatos.Nombre}" x:Name="nombre"/>
+            <Entry Text="{Binding MisDatos.PeliculaFavorita}" x:Name="pelicula"/>
+            <Entry Text="{Binding MisDatos.AnnioNacimiento}" x:Name="annio"/>
+            <BoxView HeightRequest="0.2" WidthRequest="20" BackgroundColor="Plum"/>
+            <Button Text="Haz Click 1" Command="{Binding HazClickCommand}" HorizontalOptions="CenterAndExpand" HeightRequest="50"/>
+            <Button Text="Haz Click 2" Command="{Binding haz}" HorizontalOptions="CenterAndExpand" HeightRequest="50"/>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
